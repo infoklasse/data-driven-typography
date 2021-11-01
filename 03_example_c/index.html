@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,121 +9,124 @@
 </head>
 
 <style>
-
     /* FONT EMBEDDING  */
-body{
-    background-color: black;
-}
+    body {
+        background-color: black;
+    }
+
     @font-face {
         font-family: 'Tinyfont';
         src: url('TINY5x3GX.ttf');
     }
-  
-    #container{
+
+    #container {
         font-family: "Tinyfont";
         font-size: 840px;
         margin-left: 40%;
         width: 800px;
-        color: white;    }
+        color: white;
+    }
 
 
 
-    h5{text-align:left;
-        margin-left:45%;
-        color:white;
-        font-family:'Courier New', Courier, monospace;
+    h5 {
+        text-align: left;
+        margin-left: 45%;
+        color: white;
+        font-family: 'Courier New', Courier, monospace;
         font-size: 20px;
-        margin-top: 20%;}
+        margin-top: 20%;
+    }
 
-        p{
-            margin-top: 10px;            
-            margin-bottom: 250px;
-        }
-    
-
+    p {
+        margin-top: 10px;
+        margin-bottom: 250px;
+    }
 </style>
+
 <body>
     <h5>letter frequency</h5>
     <div id="container"></div>
 
 </body>
+
 </html>
 
 
 <script>
-let frequency =
-[8.167,
-1.49,
-2.78,
-4.25,
-12.70,
-2.23,
-2.02,
-6.09,
-6.97,
-0.15,
-0.77,
-4.03,
-2.41,
-6.75,
-7.51,
-1.93,
-0.10,
-5.99,
-6.33,
-9.06,
-2.76,
-0.98,
-2.36,
-0.15,
-1.97,
-0.07]
+    let frequency =
+        [8.167,
+            1.49,
+            2.78,
+            4.25,
+            12.70,
+            2.23,
+            2.02,
+            6.09,
+            6.97,
+            0.15,
+            0.77,
+            4.03,
+            2.41,
+            6.75,
+            7.51,
+            1.93,
+            0.10,
+            5.99,
+            6.33,
+            9.06,
+            2.76,
+            0.98,
+            2.36,
+            0.15,
+            1.97,
+            0.07]
 
 
-let letters = [ 
-"a",
-"b",
-"c",
-"d",
-"e",
-"f",
-"g",
-"h",
-"i",
-"j",
-"k",
-"l",
-"m",
-"n",
-"o",
-"p",
-"q",
-"r",
-"s",
-"t",
-"u",
-"v",
-"w",
-"x",
-"y",
-"z"
-]
-console.log(letters)
-console.log(letters[0])
+    let letters = [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "g",
+        "h",
+        "i",
+        "j",
+        "k",
+        "l",
+        "m",
+        "n",
+        "o",
+        "p",
+        "q",
+        "r",
+        "s",
+        "t",
+        "u",
+        "v",
+        "w",
+        "x",
+        "y",
+        "z"
+    ]
+    console.log(letters)
+    console.log(letters[0])
 
-function generateLetters() {
-  for (var i = 0; i <= letters.length-1; i++) {
-    var newP = document.createElement("p");
-    newP.setAttribute("id",letters[i]);
-    var letter = document.createTextNode(letters[i]);
-    newP.appendChild(letter);
-    document.getElementById("container").appendChild(newP);
-    document.getElementById(letters[i]).style.fontVariationSettings="'wght'" + frequency[i]*10;
-  }
-}
+    function generateLetters() {
+        for (var i = 0; i <= letters.length - 1; i++) {
+            var newP = document.createElement("p");
+            newP.setAttribute("id", letters[i]);
+            var letter = document.createTextNode(letters[i]);
+            newP.appendChild(letter);
+            document.getElementById("container").appendChild(newP);
+            document.getElementById(letters[i]).style.fontVariationSettings = "'wght'" + frequency[i] * 10;
+        }
+    }
 
 
-generateLetters();
+    generateLetters();
 
 
 
