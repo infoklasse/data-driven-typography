@@ -10,7 +10,9 @@
 <style>
 
     /* FONT EMBEDDING  */
-
+body{
+    background-color: black;
+}
     @font-face {
         font-family: 'Tinyfont';
         src: url('TINY5x3GX.ttf');
@@ -18,15 +20,24 @@
   
     #container{
         font-family: "Tinyfont";
-        font-size: 400px;
-        margin-left: 45%;
+        font-size: 840px;
+        margin-left: 40%;
         width: 800px;
-    }
+        color: white;    }
+
+
+
     h5{text-align:left;
         margin-left:45%;
+        color:white;
         font-family:'Courier New', Courier, monospace;
         font-size: 20px;
-        margin-top: 10%;}
+        margin-top: 20%;}
+
+        p{
+            margin-top: 10px;            
+            margin-bottom: 250px;
+        }
     
 
 </style>
@@ -95,17 +106,17 @@ let letters = [
 "x",
 "y",
 "z"
-
 ]
 console.log(letters)
+console.log(letters[0])
 
 function generateLetters() {
-  for (var i = 0; i <= 25; i++) {
-    var newSpan = document.createElement("p");
-    newSpan.setAttribute("id",letters[i]);
+  for (var i = 0; i <= letters.length-1; i++) {
+    var newP = document.createElement("p");
+    newP.setAttribute("id",letters[i]);
     var letter = document.createTextNode(letters[i]);
-    newSpan.appendChild(letter);
-    document.getElementById("container").appendChild(newSpan);
+    newP.appendChild(letter);
+    document.getElementById("container").appendChild(newP);
     document.getElementById(letters[i]).style.fontVariationSettings="'wght'" + frequency[i]*10;
   }
 }
