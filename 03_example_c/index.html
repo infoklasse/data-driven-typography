@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data-Driven-Typography</title>
+</head>
+
+<style>
+
+    /* FONT EMBEDDING  */
+
+    @font-face {
+        font-family: 'Tinyfont';
+        src: url('TINY5x3GX.ttf');
+    }
+  
+    #container{
+        font-family: "Tinyfont";
+        font-size: 400px;
+        margin-left: 45%;
+        width: 800px;
+    }
+    h5{text-align:left;
+        margin-left:45%;
+        font-family:'Courier New', Courier, monospace;
+        font-size: 20px;
+        margin-top: 10%;}
+    
+
+</style>
+<body>
+    <h5>letter frequency</h5>
+    <div id="container"></div>
+
+</body>
+</html>
+
+
+<script>
+let frequency =
+[8.167,
+1.49,
+2.78,
+4.25,
+12.70,
+2.23,
+2.02,
+6.09,
+6.97,
+0.15,
+0.77,
+4.03,
+2.41,
+6.75,
+7.51,
+1.93,
+0.10,
+5.99,
+6.33,
+9.06,
+2.76,
+0.98,
+2.36,
+0.15,
+1.97,
+0.07]
+
+
+let letters = [ 
+"a",
+"b",
+"c",
+"d",
+"e",
+"f",
+"g",
+"h",
+"i",
+"j",
+"k",
+"l",
+"m",
+"n",
+"o",
+"p",
+"q",
+"r",
+"s",
+"t",
+"u",
+"v",
+"w",
+"x",
+"y",
+"z"
+
+]
+console.log(letters)
+
+function generateLetters() {
+  for (var i = 0; i <= 25; i++) {
+    var newSpan = document.createElement("p");
+    newSpan.setAttribute("id",letters[i]);
+    var letter = document.createTextNode(letters[i]);
+    newSpan.appendChild(letter);
+    document.getElementById("container").appendChild(newSpan);
+    document.getElementById(letters[i]).style.fontVariationSettings="'wght'" + frequency[i]*10;
+  }
+}
+
+
+generateLetters();
+
+
+
+
+
+</script>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data-Driven-Typography</title>
+</head>
+
+<style>
+
+            /* FONT EMBEDDING  */
+
+    @font-face {
+        font-family: 'Homecomputer';
+        src: url('Sixtyfour.ttf');
+    }
+
+        /* GENERAL CSS */
+
+
+    html {
+        font-family: "Homecomputer";
+        font-size: 300px;
+    }
+
+    p{
+        font-family:'Courier New', Courier, monospace;
+        font-size: 20px;
+        font-variation-settings: 'wght'50;
+        margin-top: 10%;
+    }
+
+    #container {
+        width: 1200px;
+        height: 600px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 30%;
+        margin: auto;
+        text-align: center;
+    }
+
+    #english{
+        font-variation-settings: 'SCAN' -100;
+        transition:  2s;
+        transition-delay: 5s;
+    }
+
+    #polish{
+        font-variation-settings: 'SCAN' -100;
+        transition:  2s;
+        transition-delay: 5s;
+
+    }
+
+  #english:hover{
+      font-variation-settings: 'SCAN' calc(16.40*10);
+      transition:  1s;
+
+  }
+  #polish:hover{ 
+    font-variation-settings: 'SCAN' calc(7.66*10);
+    transition:  1s;
+
+  }
+
+    
+</style>
+
+<body>
+    <div id="container">
+        <p>german</p>
+        <span id="english"> e</span>
+        <p>polish</p>
+        <span id="polish"> e</span>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data-Driven-Typography</title>
+</head>
+
+<style>
+
+            /* FONT EMBEDDING  */
+
+    @font-face {
+        font-family: 'Tinyfont';
+        src: url('TINY5x3GX.ttf');
+    }
+
+        /* GENERAL CSS */
+
+
+    html {
+        font-family: "Tinyfont";
+        font-size: 200px;
+    }
+
+    p{
+        font-family:'Courier New', Courier, monospace;
+        font-size: 20px;
+        font-variation-settings: 'wght'50;
+        margin-top: 10%;
+    }
+
+    #container {
+        width: 800px;
+        height: 600px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        text-align: center;
+    }
+
+
+    /* ENGLISH DATA */
+    #en_a {
+        font-variation-settings: 'wght'calc(8.167*10);
+    }
+
+    #en_b {
+        font-variation-settings: 'wght'calc(1.49*10);
+    }
+
+    #en_c {
+        font-variation-settings: 'wght'calc(2.78*10);
+    }
+
+    #en_d {
+        font-variation-settings: 'wght'calc(4.25*10);
+    }
+
+    #en_e {
+        font-variation-settings: 'wght'calc(12.70*10);
+    }
+
+    /* GERMAN DATA */
+    #de_a {
+        font-variation-settings: 'wght'calc(7.64*10);
+    }
+
+    #de_b {
+        font-variation-settings: 'wght'calc(0.90*10);
+    }
+
+    #de_c {
+        font-variation-settings: 'wght'calc(3.26*10);
+    }
+
+    #de_d {
+        font-variation-settings: 'wght'calc(3.67*10);
+    }
+
+    #de_e {
+        font-variation-settings: 'wght'calc(14.72*10);
+    }
+
+    
+</style>
+
+<body>
+    <div id="container">
+        <p>english</p>
+        <span id="en_a"> a</span>
+        <span id="en_b"> b</span>
+        <span id="en_c"> c</span>
+        <span id="en_d"> d</span>
+        <span id="en_e"> e</span>
+        <p>german</p>
+        <span id="de_a"> a</span>
+        <span id="de_b"> b</span>
+        <span id="de_c"> c</span>
+        <span id="de_d"> d</span>
+        <span id="de_e"> e</span>
+    </div>
+
+</body>
+
+</html>
